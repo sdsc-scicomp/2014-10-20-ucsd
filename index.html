@@ -1,36 +1,20 @@
 ---
 layout: bootcamp
 root: .
-venue: Euphoric State University
-address: 123 College Street, Euphoria
+venue: San Diego Supercomputer Center Auditorium
+address: UC San Diego Campus, 10100 Hopkins Drive La Jolla
 country: United-States
-humandate: Feb 17-18, 2020
-humantime: 9:00 am - 4:30 pm
-startdate: 2020-06-17
-enddate: 2020-06-18
-latlng: 41.7901128,-87.6007318
+humandate: Oct 20-21, 2014
+humantime: 9:00 am - 4:00 pm
+startdate: 2014-10-20
+enddate: 2014-10-21
+latlng: 32.8841021,-117.2390985
 registration: restricted
-instructor: ["Grace Hopper", "Alan Turing"]
-helper: ["John von Neumann"]
-contact: admin@software-carpentry.org
-lessons: ['R', 'Python', 'SQL', 'Git', 'Bash', 'VM']
+instructor: ["Andrea Zonca"]
+helper: [""]
+lessons: ['Python', 'Git', 'Bash']
+contact: zonca@sdsc.edu
 ---
-<!--
-    Edit the values in the parameter block above to be appropriate for your bootcamp.
-    Please use three-letter month names for the 'humandate' field.
--->
-
-<!-- Remove the block below. -->
-<div align="center">
-  <p><strong><em>
-      This page is a template for bootcamp home pages.
-      <br/>
-      Please see
-      <a href="//github.com/swcarpentry/bc">github.com/swcarpentry/bc</a>
-      for instructions on how to create
-      a repository for your bootcamp.
-  </em></strong></p>
-</div>
 
 <!--
     This block includes the Eventbrite registration widget if 'eventbrite' has been set in the header.
@@ -51,6 +35,22 @@ lessons: ['R', 'Python', 'SQL', 'Git', 'Bash', 'VM']
   and to apply what they have learned to their own research problems.
 </p>
 
+<!-- This block displays the instructors' names if they are available. -->
+{% if page.instructor %}
+<p>
+  <strong>Instructors:</strong>
+  {{page.instructor | join: ', ' %}}
+</p>
+{% endif %}
+
+<!-- This block displays the helpers' names if they are available. -->
+{% if page.helper %}
+<p>
+  <strong>Helpers:</strong>
+  {{page.helper | join: ', ' %}}
+</p>
+{% endif %}
+
 <!--
     Modify this block to reflect the target audience for your bootcamp.
     In particular, if it is only open to people from a particular institution,
@@ -58,7 +58,7 @@ lessons: ['R', 'Python', 'SQL', 'Git', 'Bash', 'VM']
 -->
 <p>
   <strong>Who:</strong>
-  The course is aimed at graduate students and other researchers.
+  The course is aimed at postdocs.
 </p>
 
 <!--
@@ -110,9 +110,10 @@ lessons: ['R', 'Python', 'SQL', 'Git', 'Bash', 'VM']
   <div class="span6">
     <h3>Day 1</h3>
     <table class="table table-striped">
-      <tr> <td>09:00</td> <td>Automating tasks with the Unix shell</td> </tr>
+      <tr> <td>08:30</td> <td>Help for people with install issues (optional)</td> </tr>
+      <tr> <td>09:00</td> <td>Introduction to Python</td> </tr>
       <tr> <td><em>10:30</em></td> <td><em>Coffee break</em></td> </tr>
-      <tr> <td>12:00</td> <td>Lunch break</td> </tr>
+      <tr> <td>12:15</td> <td>Lunch break</td> </tr>
       <tr> <td>13:00</td> <td>Building programs with Python</td> </tr>
       <tr> <td><em>14:30</em></td> <td><em>Coffee break</em></td> </tr>
       <tr> <td>16:00</td> <td>Wrap-up</td> </tr>
@@ -121,10 +122,10 @@ lessons: ['R', 'Python', 'SQL', 'Git', 'Bash', 'VM']
   <div class="span6">
     <h3>Day 2</h3>
     <table class="table table-striped">
-      <tr> <td>09:00</td> <td>Version control with Git</td> </tr>
+      <tr> <td>09:00</td> <td>Automating tasks with the Unix shell</td> </tr>
       <tr> <td><em>10:30</em></td> <td><em>Coffee break</em></td> </tr>
-      <tr> <td>12:00</td> <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td> <td>Managing data with SQL</td> </tr>
+      <tr> <td>12:15</td> <td>Lunch break</td> </tr>
+      <tr> <td>13:00</td> <td>Version control with Git</td> </tr>
       <tr> <td><em>14:30</em></td> <td><em>Coffee break</em></td> </tr>
       <tr> <td>16:00</td> <td>Wrap-up</td> </tr>
     </table>
@@ -179,20 +180,6 @@ lessons: ['R', 'Python', 'SQL', 'Git', 'Bash', 'VM']
       <li>Open licenses</li>
       <li>Where to host work, and why</li>
       <li><a href="novice/ref/02-git.html">Reference...</a></li>
-    </ul>
-  </div>
-  <div class="span6">
-    <h3>Managing Data with SQL</h3>
-    <ul>
-      <li>Reading and sorting data</li>
-      <li>Filtering with <code>where</code></li>
-      <li>Calculating new values on the fly</li>
-      <li>Handling missing values</li>
-      <li>Combining values using aggregation</li>
-      <li>Combining information from multiple tables using <code>join</code></li>
-      <li>Creating, modifying, and deleting data</li>
-      <li>Programming with databases</li>
-      <li><a href="novice/ref/04-sql.html">Reference...</a></li>
     </ul>
   </div>
 </div>
