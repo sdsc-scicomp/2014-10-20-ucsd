@@ -11,6 +11,7 @@ enddate: 2014-10-21
 latlng: 32.8841021,-117.2390985
 registration: restricted
 instructor: ["Andrea Zonca"]
+instructor_homepage: ["http://scicomp.sdsc.edu/zonca"]
 helper: [""]
 lessons: ['Python', 'Git', 'Bash']
 contact: zonca@sdsc.edu
@@ -41,7 +42,7 @@ contact: zonca@sdsc.edu
 {% if page.instructor %}
 <p>
   <strong>Instructors:</strong>
-  {{page.instructor | join: ', ' %}}
+<a href="http://scicomp.sdsc.edu/zonca">Andrea Zonca</a>
 </p>
 {% endif %}
 
@@ -49,7 +50,7 @@ contact: zonca@sdsc.edu
 {% if page.helper %}
 <p>
   <strong>Helpers:</strong>
-  {{page.helper | join: ', ' %}}
+Philip Bitthin, Bart Borek, Rob Cooper, Trey Hunner, Thiago Mosqueiro, Christopher Rivera, Carol Willing
 </p>
 {% endif %}
 
@@ -74,6 +75,9 @@ contact: zonca@sdsc.edu
   <a href="//www.openstreetmap.org/?mlat={{ page.latlng | replace:',','&mlon=' }}&zoom=16">OpenStreetMap</a>
   or
   <a href="//maps.google.com/maps?q={{ page.latlng }}">Google Maps</a>.
+
+  The Auditorium is at the ground floor on the East side of the San Diego Supercomputer Center building,
+  with direct access from Hopkins Dr.
 </p>
 {% endif %}
 
